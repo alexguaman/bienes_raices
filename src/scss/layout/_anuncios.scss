@@ -7,6 +7,7 @@
 .anuncio {
     background-color: lighten($gris, 5);
     border: 1px solid darken($gris, 10);
+    margin-bottom: 2rem;
 
     .contenido-anuncio {
         padding: 2rem;
@@ -15,29 +16,30 @@
     h3, p {
         margin: 0;
     }
-    .precio {
-        color: $verde;
-        font-weight: $bold;
-        font-size: 3rem;
-    }
+}
 
-    .iconos-caracteristicas {
+.precio {
+    color: $verde;
+    font-weight: $bold;
+    font-size: 3rem;
+}
+
+.iconos-caracteristicas {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    max-width: 40rem;
+
+    li {
         display: flex;
-        list-style: none;
-        padding: 0;
+        flex: 1;
 
-        li {
-            display: flex;
-            flex: 1;
-
-            img {
-                flex: 0 0 5rem;
-                margin-right: 1rem;
-            }
-            p {
-                font-weight: $black;
-            }
+        img {
+            flex: 0 0 5rem;
+            margin-right: 1rem;
+        }
+        p {
+            font-weight: $black;
         }
     }
-
 }
