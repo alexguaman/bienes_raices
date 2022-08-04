@@ -1,5 +1,10 @@
 <?php
 
+require '../../includes/funciones.php';
+if (!estaAutenticado()) {
+  header('Location: /login.php');
+}
+
 $id = $_GET['id'];
 $id = filter_var($id, FILTER_VALIDATE_INT);
 
@@ -128,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   }
 }
 
-require '../../includes/funciones.php';
+// require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
 
